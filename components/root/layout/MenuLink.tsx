@@ -69,6 +69,7 @@ export default function MenuLink(props: IMenuLinkProps) {
                   parentTo={route.to}
                   route={childrenRoute}
                   setOpen={setOpenChildren}
+                  open={openChildren}
                 />
               ))}
           </ul>

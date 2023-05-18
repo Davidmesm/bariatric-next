@@ -9,10 +9,11 @@ export interface IMenuChildLinkProps {
   parentTo: string;
   route: route;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  open: boolean;
 }
 
 export default function MenuChildLink(props: IMenuChildLinkProps) {
-  const { parentTo, route, setOpen } = props;
+  const { parentTo, route, setOpen, open } = props;
 
   const pathname = usePathname();
 
@@ -27,12 +28,17 @@ export default function MenuChildLink(props: IMenuChildLinkProps) {
   useEffect(() => {
     if(active) {
       setOpen(true)
+    }
+  }, [active, setOpen])
+
+  useEffect(() => {
+    if(active && open) {
       if(childRef.current) {
         childRef.current.focus()
         childRef.current.scrollIntoView()
       }
     }
-  }, [active, setOpen])
+  }, [active, open])
   
 
   return (
