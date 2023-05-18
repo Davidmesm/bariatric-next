@@ -1,0 +1,82 @@
+@use '@/styles/variables';
+
+$header-size: 4rem;
+$padding-x: 1rem;
+
+.appShell {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    @media only screen and (min-width: variables.$xs-breakpoint){
+        flex-wrap: nowrap;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media only screen and (min-width: variables.$xs-breakpoint){
+        width: 15rem;
+    }
+
+    @media only screen and (min-width: variables.$sm-breakpoint){
+        width: 20rem;
+    }
+
+    border-right-color: variables.$grey-color-400;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.header {
+    height: $header-size;
+    padding-left: $padding-x;
+    padding-right: $padding-x;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom-color: variables.$grey-color-400;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.headerTitle {
+    display: flex;
+    align-items: center;
+}
+
+.imageContainer {
+    padding-top: .125rem;
+    padding-bottom: .125rem;
+    padding-right: .5rem;
+}
+
+.menu {
+    display: none;
+
+    @media only screen and (min-width: variables.$xs-breakpoint){
+        display: block;
+    }
+    height: calc(100vh - $header-size);
+    overflow-y: auto;
+    padding-left: $padding-x;
+    padding-right: $padding-x;
+    padding-top: 1.25rem;
+}
+
+.menuList {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.main {
+    flex-grow: 1;
+}

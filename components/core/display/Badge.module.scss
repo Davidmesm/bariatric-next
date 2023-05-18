@@ -1,0 +1,9 @@
+@use '@/styles/variables';
+
+.badge {
+  display: inline-block;
+  padding: 5px 5px;
+  background-color: variables.$grey-color-100;
+  font-size: 12px;
+  border-radius: 20px;
+}

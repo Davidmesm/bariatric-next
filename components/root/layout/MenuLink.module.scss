@@ -1,0 +1,107 @@
+@use "@/styles/variables";
+
+.menuItem {
+  :hover {
+    background-color: variables.$purple-color-100;
+  }
+
+  :active {
+    background-color: variables.$yellow-color-300;
+  }
+
+  &.active {
+    background-color: variables.$yellow-color-300;
+
+    :hover {
+      background-color: variables.$yellow-color-300;
+    }
+  }
+
+  .open {
+    background-color: transparent;
+
+    :hover {
+      background-color: transparent;
+    }
+
+    :active {
+      background-color: transparent;
+    }
+  }
+
+  .menuChildItem {
+    :hover {
+      background-color: variables.$purple-color-100;
+    }
+
+    :active {
+      background-color: variables.$yellow-color-300;
+    }
+
+    &.selected {
+      background-color: variables.$yellow-color-300;
+
+      :hover {
+        background-color: variables.$yellow-color-300;
+      }
+    }
+  }
+}
+
+.menuChildLink {
+  padding-left: 0.5rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.menuLink {
+  display: flex;
+  align-items: center;
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.menuLinkContainer {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.iconContainer {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: variables.$primary-color;
+  margin-right: 0.75rem;
+  background-color: variables.$purple-color-200;
+  padding: 0.3rem;
+  border-radius: 30%;
+  border: 1px solid variables.$purple-color-200;
+}
+
+.chevron {
+  margin-left: auto;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.childrenList {
+  margin-left: 4rem;
+  border-left-color: variables.$purple-color-200;
+  border-left-width: 2px;
+  border-left-style: solid;
+  margin-top: 0.5rem;
+
+  &.hidden {
+    display: none;
+  }
+}
