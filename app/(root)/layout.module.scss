@@ -4,8 +4,8 @@ $header-size: 4rem;
 $padding-x: 1rem;
 
 .appShell {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
@@ -79,4 +79,5 @@ $padding-x: 1rem;
 
 .main {
     flex-grow: 1;
+    display: flex;
 }

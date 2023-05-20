@@ -1,0 +1,1 @@
+export type { ContactChannelType } from './types/index';
